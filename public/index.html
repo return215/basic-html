@@ -1,122 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Linker Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Linker Project</title>
 </head>
+
 <body>
-    <header>
-        <h1>Linker Project</h1>
-        <p>How links are initalized, generated, and executed in realtime.</p>
-        <nav>
-            <ul>
-                <li><a href="#init">Initialization</a></li>
-                <li><a href="#gen">Generation</a></li>
-                <li><a href="#exec">Execution</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <article>
-            <section id="init">
-                <h2>Initialization</h2>
+  <header>
+    <h1>Linker Project</h1>
+    <p>How links are initalized, generated, and executed in realtime.</p>
+    <nav>
+      <ul>
+        <li><a href="#init">Initialization</a></li>
+        <li><a href="#gen">Generation</a></li>
+        <li><a href="#exec">Execution</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <section id="init">
+        <h2>Initialization</h2>
 
-                <p>
-                    The Linker Project is a system of data processing in a 6x12 grid. The data comes in <em>nodes</em>
-                    of doubles, triples, or quadruples. Upon landing each node split apart and connect with nearby nodes
-                    of the same color. When four nodes connect, a link is made and destroyed, converting it to transferrable
-                    data. The system shuts down when the central spawn area is obstructed.
-                </p>
-                <p>
-                    The Linker Project was initiated in 1991 under the name <em>Puyo Puyo</em>&trade;. Originally developed
-                    by Compile for the MSX2 system, it was later ported to arcade machines in 1992.
-                </p>
+        <p>
+          The Linker Project is a system of data processing in a 6x12 grid. The data comes in <em>nodes</em>
+          of doubles, triples, or quadruples. Upon landing each node split apart and connect with nearby nodes
+          of the same color. When four nodes connect, a link is made and destroyed, converting it to
+          transferrable
+          data. The system shuts down when the central spawn area is obstructed.
+        </p>
+        <p>
+          The Linker Project was initiated in 1991 under the name <em>Puyo Puyo</em>&trade;. Originally
+          developed
+          by Compile for the MSX2 system, it was later ported to arcade machines in 1992.
+        </p>
 
-                <p>
-                    The sequel, <em>Puyo Puyo 2</em> (1994), adds features that became the staple of the series.
-                    The most notable being the ability to counter/offset incoming attacks and double rotation in 
-                    tight spaces that were missing in the former game.
-                </p>
-            </section>
-            <section id="gen">
-                <h2>Generation</h2>
+        <p>
+          The sequel, <em>Puyo Puyo 2</em> (1994), adds features that became the staple of the series.
+          The most notable being the ability to counter/offset incoming attacks and double rotation in
+          tight spaces that were missing in the former game.
+        </p>
+      </section>
+      <section id="gen">
+        <h2>Generation</h2>
 
-                <table border="1px">
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Neo</td>
-                        <td>College student</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Star</td>
-                        <td>Red Hat enthusiast</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Sphera</td>
-                        <td>Traveller</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Quill</td>
-                        <td>Full-Stack Developer</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Torbal</td>
-                        <td>Hacker</td>
-                    </tr>
-                </table>
+        <table border="1px">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Neo</td>
+            <td>College student</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Star</td>
+            <td>Red Hat enthusiast</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Sphera</td>
+            <td>Traveller</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Quill</td>
+            <td>Full-Stack Developer</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Torbal</td>
+            <td>Hacker</td>
+          </tr>
+        </table>
 
-                <table border="1px">
-                    <tr>
-                        <td rowspan="2">1</td>
-                        <td colspan="2">2</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2" colspan="2">5</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                    </tr>
-                </table>
-            </section>
+        <table border="1px">
+          <tr>
+            <td rowspan="2">1</td>
+            <td colspan="2">2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td rowspan="2" colspan="2">5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+          </tr>
+        </table>
+      </section>
 
-            <section id="exec">
-                <h2>Execution</h2>
-                <figure>
-                    <a href="https://www.puyo.gg/simulator/chain/kcvdyd4p24" target="_blank">
-                        <img src="http://storage.googleapis.com/puyo-gg.appspot.com/gifs%2Fkcvdyd4p24.gif" alt="Building a 3-chain" height="300px">
-                    </a>
-                    <figcaption>Building a 3-chain. <a href="https://puyo.gg">Simulator by S2LSOFTENER</a>.</figcaption>
-                </figure>
-                <figure>
-                    <a href="https://puyonexus.com/chainsim/chain/pQCQj" target="_blank">
-                        <img src="https://puyonexus.com/chainsim/image/pQCQj.gif" alt="3-chain resolving" height="300px">
-                    </a>
-                    <figcaption>3-chain resolving.</figcaption>
-                </figure>
-            </section>
-            
-        </article>
+      <section id="exec">
+        <h2>Execution</h2>
+        <figure>
+          <a href="https://www.puyo.gg/simulator/chain/kcvdyd4p24" target="_blank">
+            <img src="http://storage.googleapis.com/puyo-gg.appspot.com/gifs%2Fkcvdyd4p24.gif" alt="Building a 3-chain"
+              height="300px">
+          </a>
+          <figcaption>Building a 3-chain. <a href="https://puyo.gg">Simulator by S2LSOFTENER</a>.</figcaption>
+        </figure>
+        <figure>
+          <a href="https://puyonexus.com/chainsim/chain/pQCQj" target="_blank">
+            <img src="https://puyonexus.com/chainsim/image/pQCQj.gif" alt="3-chain resolving" height="300px">
+          </a>
+          <figcaption>3-chain resolving.</figcaption>
+        </figure>
+      </section>
 
-    </main>
-    <footer>
-        <p>Copyright &copy; 2020 - return215</p>
-    </footer>
-    <script src="index.js"></script>
+    </article>
+
+  </main>
+  <footer>
+    <p>Copyright &copy; 2020 - return215</p>
+  </footer>
+  <script src="index.js"></script>
 </body>
+
 </html>
