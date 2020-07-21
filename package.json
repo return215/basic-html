@@ -4,7 +4,8 @@
   "description": "Learning basics of web development, but I use TS instead",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "keywords": [
     "html",
@@ -13,5 +14,8 @@
     "ts"
   ],
   "author": "return215",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "3.9.7"
+  }
 }

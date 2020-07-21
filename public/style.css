@@ -1,0 +1,32 @@
+body
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 16px;
+}
+
+h1
+{
+    font-size: 32pt;
+    font-weight: 200;
+    color: blueviolet;
+}
+
+h2 {
+    font-size: 28pt;
+    font-weight: 300;
+    color: cadetblue;
+}
+
+header, .header
+{
+    padding: 24px;
+    /* color: white;
+    background-color: #324ec9; */
+}
+
+footer, .footer
+{
+    padding: 24px;
+    color: white;
+    background-color: #111111;
+}
