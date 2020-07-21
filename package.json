@@ -1,0 +1,17 @@
+{
+  "name": "welcome-html",
+  "version": "1.0.0",
+  "description": "Learning basics of web development, but I use TS instead",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "ts"
+  ],
+  "author": "return215",
+  "license": "ISC"
+}
