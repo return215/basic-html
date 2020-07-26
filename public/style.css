@@ -175,12 +175,22 @@ table {
 
 #content {
   float: left;
-  width: 70%;
+  flex-grow: 1;
 }
 
 #aside {
   float: right;
-  width: 30%;
+  width: 320px;
+}
+
+.fumen {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 801px) {
+  main {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -204,7 +214,9 @@ footer,
 
 .calculator {
   margin: 0 auto;
+  padding: 16px;
   max-width: 800px;
+  font-family: 'Roboto Mono', 'Consolas', 'Courier New', 'Courier', monospace;
 }
 
 .flex {
@@ -219,6 +231,20 @@ footer,
   flex-direction: column;
 }
 
+.calc-display {
+  padding: 8px 1em;
+  color: white;
+  background-color: #111;
+
+  text-align: right;
+  font-size: 2em;
+}
+
+h1#display-num {
+  color: white !important;
+  font-family: 'Roboto Mono', 'Consolas', 'Courier New', 'Courier', monospace;
+}
+
 .button {
   flex-basis: 25%;
 
@@ -227,5 +253,32 @@ footer,
   text-align: center;
   padding: 32px;
   border: 1px solid black;
-  background: linear-gradient(), -webkit-linear-gradient(top, #ccc, #ddd);
+  background: linear-gradient(#ccc, #ddd), -webkit-linear-gradient(top, #ccc, #ddd);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+  .button {
+    padding: 16px;
+  }
+}
+
+.button.double {
+  flex-basis: 50%;
+}
+
+.button:hover {
+  background: white;
+}
+
+.calc-negate {
+  background: linear-gradient(#33e, #55f), -webkit-linear-gradient(top, #33e, #55f);
+}
+
+.calc-operator {
+  background: linear-gradient(#33e, #55f), -webkit-linear-gradient(top, #33e, #55f);
+}
+
+.calc-equals {
+  background: linear-gradient(#33e, #55f), -webkit-linear-gradient(top, #33e, #55f);
 }
