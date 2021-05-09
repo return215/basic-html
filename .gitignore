@@ -109,4 +109,4 @@ dist
 .vscode-test
 
 # ignore unnecessary files (not ready to be used at the moment)
-**/storage.[jt]s
+#**/storage.[jt]s

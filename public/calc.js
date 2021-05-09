@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var storage_js_1 = require("./storage.js");
+import { putHistory, getHistory } from "./storage.js";
 console.log("Loading calculator...");
 var calcData = {
     displayFirst: true,
@@ -81,7 +79,7 @@ function doCalculation() {
         operator: calcData.operator || "?",
         result: tempVal
     };
-    storage_js_1.putHistory(history);
+    putHistory(history);
     calcData.firstNumber = tempVal;
     calcData.displayFirst = true;
     calcData.waitNextNumber = true;
@@ -89,7 +87,7 @@ function doCalculation() {
     renderHistory();
 }
 function renderHistory() {
-    var historyData = storage_js_1.getHistory();
+    var historyData = getHistory();
     var historyList = document.querySelector("#history-list");
     if (historyList) {
         historyList.innerHTML = "";
