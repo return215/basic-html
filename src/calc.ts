@@ -1,10 +1,6 @@
+import { ICalcHistory, putHistory, getHistory } from "./storage.js"
+
 console.log("Loading calculator...")
-
-// function multiply(a: number, b: number): number {
-//     return a * b;
-// }
-
-// console.log(window.location)
 
 interface ICalculatorData {
     displayFirst: boolean,
@@ -104,10 +100,37 @@ function doCalculation() {
         }
     }
 
+    const history: ICalcHistory = {
+        firstNumber: calcData.firstNumber,
+        secondNumber: calcData.secondNumber,
+        operator: calcData.operator || "?",
+        result: tempVal
+    }
+
+    putHistory(history)
+
     calcData.firstNumber = tempVal
     calcData.displayFirst = true
     calcData.waitNextNumber = true
     calcData.calculationDone = true
+
+    renderHistory()
+}
+
+function renderHistory() {
+    const historyData = getHistory()
+    let historyList = document.querySelector("#history-list")
+
+    if(historyList){
+        historyList.innerHTML = ""
+
+        historyData.forEach(historyItem => {
+            let row = document.createElement("tr")
+            row.innerHTML = `${historyItem.firstNumber} ${historyItem.operator} ${historyItem.secondNumber} = ${historyItem.result}`
+
+            historyList?.appendChild(row)
+        });
+    }
 }
 
 // Attaching events to buttons
@@ -127,6 +150,8 @@ buttons.forEach(button => {
 
     button.addEventListener('click', () => { updateDisplay() })
 });
+
+renderHistory()
 
 /* CASE TEST
  *

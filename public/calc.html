@@ -7,37 +7,60 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <section class="calculator">
-        <div class="flex flex-col">
-            <div class="calc-display">
-                <h1 id="display-num">0</h1>
+    <main>
+        <section class="calculator monospaced">
+            <div class="flex flex-col">
+                <div class="calc-display">
+                    <h1 id="display-num">0</h1>
+                </div>
+                <div class="flex flex-row">
+                    <div class="button">7</div>
+                    <div class="button">8</div>
+                    <div class="button">9</div>
+                    <div class="button calc-negate">+/-</div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="button">4</div>
+                    <div class="button">5</div>
+                    <div class="button">6</div>
+                    <div class="button calc-operator">-</div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="button">1</div>
+                    <div class="button">2</div>
+                    <div class="button">3</div>
+                    <div class="button calc-operator">+</div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="button calc-clear">CE</div>
+                    <div class="button">0</div>
+                    <div class="button double calc-equals">=</div>
+                    <!-- <div class="button"></div> -->
+                </div>
             </div>
-            <div class="flex flex-row">
-                <div class="button">7</div>
-                <div class="button">8</div>
-                <div class="button">9</div>
-                <div class="button calc-negate">+/-</div>
-            </div>
-            <div class="flex flex-row">
-                <div class="button">4</div>
-                <div class="button">5</div>
-                <div class="button">6</div>
-                <div class="button calc-operator">-</div>
-            </div>
-            <div class="flex flex-row">
-                <div class="button">1</div>
-                <div class="button">2</div>
-                <div class="button">3</div>
-                <div class="button calc-operator">+</div>
-            </div>
-            <div class="flex flex-row">
-                <div class="button calc-clear">CE</div>
-                <div class="button">0</div>
-                <div class="button double calc-equals">=</div>
-                <!-- <div class="button"></div> -->
-            </div>
-        </div>
-    </section>
-    <script src="./calc.js"></script>
+        </section>
+    
+        <section class="history card">
+            <h2>History</h2>
+    
+            <table class="monospaced">
+                <thead>
+                    <tr>
+                        <th>Values</th>
+                    </tr>
+                </thead>
+                <tbody id="history-list" class="monospaced">
+                    <!-- <tr>
+                        <td>0 + 0 = 0</td>
+                    </tr>
+                    <tr>
+                        <td>0 + 0 = 0</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="./storage.js" type="module"></script>
+    <script src="./calc.js" type="module"></script>
 </body>
 </html>

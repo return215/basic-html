@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var storage_js_1 = require("./storage.js");
 console.log("Loading calculator...");
 var calcData = {
     displayFirst: true,
@@ -73,10 +75,30 @@ function doCalculation() {
                 break;
         }
     }
+    var history = {
+        firstNumber: calcData.firstNumber,
+        secondNumber: calcData.secondNumber,
+        operator: calcData.operator || "?",
+        result: tempVal
+    };
+    storage_js_1.putHistory(history);
     calcData.firstNumber = tempVal;
     calcData.displayFirst = true;
     calcData.waitNextNumber = true;
     calcData.calculationDone = true;
+    renderHistory();
+}
+function renderHistory() {
+    var historyData = storage_js_1.getHistory();
+    var historyList = document.querySelector("#history-list");
+    if (historyList) {
+        historyList.innerHTML = "";
+        historyData.forEach(function (historyItem) {
+            var row = document.createElement("tr");
+            row.innerHTML = historyItem.firstNumber + " " + historyItem.operator + " " + historyItem.secondNumber + " = " + historyItem.result;
+            historyList === null || historyList === void 0 ? void 0 : historyList.appendChild(row);
+        });
+    }
 }
 // Attaching events to buttons
 var buttons = document.querySelectorAll(".button");
@@ -94,6 +116,7 @@ buttons.forEach(function (button) {
         button.addEventListener('click', function () { inputDigit(parseInt(button.innerHTML)); });
     button.addEventListener('click', function () { updateDisplay(); });
 });
+renderHistory();
 /* CASE TEST
  *
  * 1. 2 + 3 =
